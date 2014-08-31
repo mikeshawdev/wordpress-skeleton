@@ -44,6 +44,8 @@
 
 
 
+
+
 # ##############################################################################
 # # ERRORS                                                                     #
 # ##############################################################################
@@ -51,6 +53,8 @@
 # Disable the pattern matching based on filenames.
 
 Options -MultiViews
+
+
 
 
 
@@ -68,6 +72,8 @@ Options -MultiViews
         Header unset X-UA-Compatible
     </FilesMatch>
 </IfModule>
+
+
 
 
 
