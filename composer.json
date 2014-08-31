@@ -1,0 +1,42 @@
+{
+    "name": "{{ project_name }}",
+    "description": "{{ project_description }}",
+    "authors": [],
+
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "http://wpackagist.org"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "wordpress",
+                "type": "webroot",
+                "version": "{{ wordpress_version }}",
+                "dist": {
+                    "type": "zip",
+                    "url": "https://github.com/WordPress/WordPress/archive/{{ wordpress_version }}.zip"
+                },
+                "require" : {
+                    "fancyguy/webroot-installer": "*"
+                }
+            }
+        }
+    ],
+
+    "require": {
+        "php": ">=5.3.2",
+        "wordpress": "{{ wordpress_version }}",
+        "fancyguy/webroot-installer": "*",
+        "composer/installers": "*"
+    },
+
+    "extra": {
+        "webroot-dir": "public/wp",
+        "webroot-package": "wordpress",
+        "installer-paths": {
+            "public/content/plugins/{$name}/": ["type:wordpress-plugin"]
+        }
+    }
+}
