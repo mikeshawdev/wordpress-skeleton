@@ -1,0 +1,6 @@
+
+.vagrant
+wp
+vendor
+modules
+composer.lock

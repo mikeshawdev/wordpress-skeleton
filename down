@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# Print templates
+printStandard="%s\n"
+printSuccess="\033[0;32m%s\033[0m\n"
+printError="\033[0;31m%s\033[0m\n"
+
+
+if [ -a "Vagrantfile" ]
+then
+    printf "$printSuccess" "Vagrantfile found, running vagrant down"
+    # vagrant down
+fi
