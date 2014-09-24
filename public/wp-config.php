@@ -23,23 +23,18 @@
     switch (gethostname()) {
 
         # Development details
-        case '{{ dev_hostname }}':
-            define('DB_NAME', '{{ db_name }}');
-            define('DB_USER', '{{ db_user }}');
-            define('DB_PASSWORD', '{{ db_password }}');
-            define('DB_HOST', '{{ db_host }}');
+        case 'ubuntu':
+            define('DB_NAME', 'wordpress_dev');
+            define('DB_USER', 'root');
+            define('DB_PASSWORD', 'root');
+            define('DB_HOST', 'localhost');
 
             define('WP_DEBUG', true);
             break;
 
         # Production details
         default:
-            define('DB_NAME', '{{ db_name }}');
-            define('DB_USER', '{{ db_user }}');
-            define('DB_PASSWORD', '{{ db_password }}');
-            define('DB_HOST', '{{ db_host }}');
-
-            define('WP_DEBUG', false);
+            # Settings go here
             break;
     }
 
