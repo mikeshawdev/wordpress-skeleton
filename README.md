@@ -3,6 +3,17 @@ WordPress-Skeleton
 
 My base WordPress installation. This is meant as a simple starting point for a WordPress project. Feel free to grab the repo and use it for your projects :)
 
+## Requirements
+
+### Base
+composer
+vagrant
+
+### Puppet modules
+puppetlabs/apache
+puppetlabs/mysql
+example42/php
+
 
 ## .htaccess
 
