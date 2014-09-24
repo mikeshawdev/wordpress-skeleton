@@ -6,13 +6,13 @@ My base WordPress installation. This is meant as a simple starting point for a W
 ## Requirements
 
 ### Base
-composer
-vagrant
+- composer
+- vagrant
 
 ### Puppet modules
-puppetlabs/apache
-puppetlabs/mysql
-example42/php
+- puppetlabs/apache
+- puppetlabs/mysql
+- example42/php
 
 
 ## .htaccess
