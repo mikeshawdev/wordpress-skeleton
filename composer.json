@@ -1,6 +1,6 @@
 {
-    "name": "{{ project_name }}",
-    "description": "{{ project_description }}",
+    "name": "",
+    "description": "",
     "authors": [],
 
     "repositories": [
