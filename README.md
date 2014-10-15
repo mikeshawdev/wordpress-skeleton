@@ -8,6 +8,7 @@ My base WordPress installation. This is meant as a simple starting point for a W
 ### Base
 - composer
 - vagrant
+- puppet
 
 ### Puppet modules
 - puppetlabs/apache
