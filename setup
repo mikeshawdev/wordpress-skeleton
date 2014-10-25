@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+
+puppetModules=(
+    puppetlabs-apache
+    puppetlabs-mysql
+    example42-php
+)
+
+gruntModules=(
+    grunt
+    grunt-concurrent
+    grunt-contrib-clean
+    grunt-contrib-copy
+    grunt-contrib-jshint
+    grunt-contrib-sass
+    grunt-contrib-uglify
+    grunt-contrib-watch
+    grunt-newer
+    jit-grunt
+    load-grunt-config
+    time-grunt
+)
+
+for module in "${puppetModules[@]}"
+do
+    puppet module install $module -i modules
+done
+
+
+vagrant up
+
+
+composer install
+
+
+for module in "${gruntModules[@]}"
+do
+    npm install $module --save-dev
+done
