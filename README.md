@@ -5,7 +5,7 @@ My base WordPress installation. This is meant as a simple starting point for a W
 
 ## Requirements
 
-### Base
+### Applications
 - composer
 - vagrant
 - puppet
@@ -14,6 +14,12 @@ My base WordPress installation. This is meant as a simple starting point for a W
 - puppetlabs/apache
 - puppetlabs/mysql
 - example42/php
+
+## Setup
+
+Once you have the required applications installed, make sure to set the appropriate WordPress version in composer.json.
+
+Once this is done, you can simply run the setup script which will go through the Puppet, Composer and Vagrant processes for you.
 
 
 ## .htaccess
