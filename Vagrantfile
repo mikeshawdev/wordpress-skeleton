@@ -29,7 +29,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   # Set the owners/permissions for the shared folders on the VM
-  config.vm.synced_folder "./", "/var/sites/dev.query-auth", id: "vagrant-root",
+  config.vm.synced_folder "./", "/vagrant", id: "vagrant-root",
     owner: "vagrant",
     group: "www-data",
     mount_options: ["dmode=775,fmode=664"]
