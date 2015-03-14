@@ -1,6 +1,6 @@
-#####################
-# Set some defaults #
-#####################
+#######################
+# Set path and update #
+#######################
 
 Exec { path => "/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin" }
 exec { "apt-get update": }
@@ -9,9 +9,9 @@ exec { "apt-get update": }
 
 
 
-##############################################
-# Setup Apache through the PuppetLabs module #
-##############################################
+################
+# Setup Apache #
+################
 
 class { 'apache':
     default_vhost => false,

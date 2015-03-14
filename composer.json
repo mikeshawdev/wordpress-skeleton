@@ -1,7 +1,13 @@
 {
-    "name": "",
-    "description": "",
-    "authors": [],
+    "name": "wordpress-skeleton",
+    "description": "A base setup for WordPress development",
+    "authors": [
+        {
+            "name": "Mike Shaw",
+            "email": "mikeshawweb@gmail.com",
+            "role": "Developer"
+        }
+    ],
 
     "repositories": [
         {
@@ -29,7 +35,17 @@
         "php": ">=5.3.2",
         "wordpress": "{{ wordpress_version }}",
         "fancyguy/webroot-installer": "*",
-        "composer/installers": "*"
+        "composer/installers": "*",
+        "wpackagist-plugin/better-wp-security": "*",
+        "wpackagist-plugin/wp-super-cache": "*",
+        "wpackagist-plugin/twigpress": "*",
+        "wpackagist-plugin/wordpress-seo": "*",
+        "wpackagist-plugin/regenerate-thumbnails": "*"
+    },
+
+    "require-dev": {
+        "filp/whoops": "*",
+        "symfony/var-dumper": "*"
     },
 
     "extra": {

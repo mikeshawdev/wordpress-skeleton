@@ -1,21 +1,20 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-# Vagrantfile API/syntax version. Don't touch unless you know what you're doing!
+# Vagrantfile API/syntax version.
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
-  # Every Vagrant virtual environment requires a box to build off of.
+  # Get our base box and set the hostname for our VM
   config.vm.box = "ubuntu/trusty32"
   config.vm.box_url = "https://vagrantcloud.com/ubuntu/boxes/trusty32"
-
-  # The hostname for the VM
   config.vm.hostname = "ubuntu"
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
   config.vm.network "private_network", ip: "192.168.33.10"
+
 
   # VirtualBox configuration
   config.vm.provider "virtualbox" do |vb|
@@ -28,16 +27,18 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   end
 
-  # Set the owners/permissions for the shared folders on the VM
+
+  # Set the owner, group and permissions for the shared folders on the VM
   config.vm.synced_folder "./", "/vagrant", id: "vagrant-root",
     owner: "vagrant",
     group: "www-data",
     mount_options: ["dmode=775,fmode=664"]
 
-  # Enable provisioning with Puppet stand alone.
+
+  # Enable provisioning with Puppet
   config.vm.provision "puppet" do |puppet|
 
-    # Our paths
+    # Paths for the manifest and Puppet modules
     puppet.manifest_file  = "site.pp"
     puppet.module_path = "modules"
 
