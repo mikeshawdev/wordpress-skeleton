@@ -1,6 +1,6 @@
 {
     "name": "wordpress-skeleton",
-    "description": "A base setup for WordPress development",
+    "description": "A base set of files for WordPress development",
     "authors": [
         {
             "name": "Mike Shaw",

@@ -1,0 +1,6 @@
+build:
+  - 'concurrent:first'
+  - 'concurrent:second'
+  - 'concurrent:third'
+  - 'concurrent:fourth'
+  - 'notify:build'

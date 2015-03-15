@@ -1,0 +1,47 @@
+{
+    // Prohibits the use of bitwise operators
+    "bitwise": true,
+
+    // Exposes browser globals such as `window` and `document`
+    "browser": true,
+
+    // Requires curly braces around blocks in loops and conditionals
+    "curly": true,
+
+    // Prohibits the use of `==` and `!=` in favor of `===` and `!==`
+    "eqeqeq": true,
+
+    // Suppresses warnings about `== null` comparisons
+    "eqnull": true,
+
+    // Suppresses warnings about the use of expressions where normally you
+    // would expect to see assignments or function calls
+    "expr": true,
+
+    // Prohibits the use of a variable before it was defined
+    "latedef": true,
+
+    // Requires you to capitalize names of constructor functions
+    "newcap": true,
+
+    // Prohibits the use of `arguments.caller` and `arguments.callee`
+    "noarg": true,
+
+    // Warns when you have an empty block in your code
+    "noempty": true,
+
+    // Prohibits the use of explicitly undeclared variables
+    "undef": true,
+
+    // Warns when you define and never use your variables
+    "unused": true,
+
+    "globals": {
+        // Exposes globals made available by jQuery
+        "jQuery": true,
+
+        // Suppresses warnings regarding `console` statements. The uglify build
+        // task will remove these for production anyway
+        "console": false
+    }
+}

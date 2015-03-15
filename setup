@@ -16,3 +16,28 @@ vagrant up
 
 
 composer install
+
+
+nodePackages=(
+    grunt
+    grunt-autoprefixer
+    grunt-concurrent
+    grunt-contrib-clean
+    grunt-contrib-copy
+    grunt-contrib-jshint
+    grunt-contrib-sass
+    grunt-contrib-uglify
+    grunt-contrib-watch
+    grunt-delete-syn
+    grunt-newer
+    grunt-notify
+    jit-grunt
+    jshint-stylish
+    load-grunt-config
+    time-grunt
+)
+
+for package in "${nodePackages[@]}"
+do
+    npm install $package --save-dev
+done
