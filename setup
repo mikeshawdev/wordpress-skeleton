@@ -28,7 +28,7 @@ nodePackages=(
     grunt-contrib-sass
     grunt-contrib-uglify
     grunt-contrib-watch
-    grunt-delete-syn
+    grunt-delete-sync
     grunt-newer
     grunt-notify
     jit-grunt
