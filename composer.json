@@ -1,7 +1,7 @@
 {
     "name": "wordpress-skeleton",
     "description": "A base set of files for WordPress development",
-    "version": "1.0.0",
+    "version": "1.2.0",
     "authors": [
         {
             "name": "Mike Shaw",
@@ -37,6 +37,7 @@
         "wordpress": "{{ wordpress_version }}",
         "fancyguy/webroot-installer": "*",
         "composer/installers": "*",
+        "vlucas/phpdotenv": "*",
         "wpackagist-plugin/better-wp-security": "*",
         "wpackagist-plugin/wp-super-cache": "*",
         "wpackagist-plugin/twigpress": "*",
@@ -47,6 +48,12 @@
     "require-dev": {
         "filp/whoops": "*",
         "symfony/var-dumper": "*"
+    },
+
+    "autoload": {
+        "files": [
+            "public/helpers.php"
+        ]
     },
 
     "extra": {
