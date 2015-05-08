@@ -1,6 +1,6 @@
 {
     "name": "wordpress-skeleton",
-    "version": "1.0.0",
+    "version": "1.2.0",
     "description": "A base set of files for WordPress development",
     "author": "Mike Shaw <mikeshawweb@gmail.com>",
     "repository": "https://github.com/mikeshawdev/WordPress-Skeleton"
