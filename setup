@@ -23,6 +23,7 @@ nodePackages=(
     grunt-delete-sync
     grunt-newer
     grunt-notify
+    grunt-version-assets
     jit-grunt
     jshint-stylish
     load-grunt-config

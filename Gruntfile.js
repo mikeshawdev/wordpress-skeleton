@@ -1,5 +1,5 @@
-module.exports = function (grunt) {
-
+module.exports = function (grunt)
+{
     /**
      * Provides a nicer output for the time taken
      */
@@ -10,41 +10,49 @@ module.exports = function (grunt) {
      * Allows a quicker workflow by loading in Grunt tasks as they are needed,
      * rather than all at the beginning
      */
-    require('jit-grunt')(grunt);
+    require('jit-grunt')(grunt, {
+        versioning: 'grunt-version-assets'
+    });
 
 
     /**
-     * Setup some data to be passed to our tasks
+     * This data is passed to the task configuration files
      */
     var data = {
         'src': {
-            'dir': 'src',
-            'scss': 'src/scss',
-            'js': 'src/js',
-            'fonts': 'src/fonts',
+            'theme': {
+                'dir': 'src/{{ theme_name }}'
+            },
 
             'bower': {
                 'dir': 'bower_components'
-            }
-        },
+            },
 
-        'plugins': {
-            'src': 'plugins-src',
-            'build': 'public/content/plugins'
+            'plugins': {
+                'dir': 'src/plugins'
+            }
         },
 
         'build': {
-            'dir': 'public/content',
             'theme': {
-                'dir': 'public/content/themes/{{ theme_name }}',
-                'css': 'public/content/themes/{{ theme_name }}/css',
-                'fonts': 'public/content/themes/{{ theme_name }}/fonts',
-                'js': 'public/content/themes/{{ theme_name }}/js',
-                'img': 'public/content/themes/{{ theme_name }}/img',
-                'twigs': 'public/content/themes/{{ theme_name }}/twigs'
+                'dir': 'public/app/themes/{{ theme_name }}'
+            },
+
+            'plugins': {
+                'dir': 'public/app/plugins'
             }
         }
     };
+
+    data.src.theme.scss = data.src.theme.dir + '/scss';
+    data.src.theme.js = data.src.theme.dir + '/js';
+    data.src.theme.fonts = data.src.theme.dir + '/fonts';
+
+    data.build.theme.css = data.build.theme.dir + '/css';
+    data.build.theme.fonts = data.build.theme.dir + '/fonts';
+    data.build.theme.js = data.build.theme.dir + '/js';
+    data.build.theme.img = data.build.theme.dir + '/img';
+    data.build.theme.twigs = data.build.theme.dir + '/twigs';
 
 
     /**

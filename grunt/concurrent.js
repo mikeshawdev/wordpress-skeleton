@@ -1,6 +1,6 @@
 module.exports = {
     first:   ['clean:all'],
     second:  ['sass:build', 'copy:src', 'copy:plugins'],
-    third:   ['autoprefixer:all', 'jshint:all'],
+    third:   ['autoprefixer:all', 'eslint'],
     fourth:  ['uglify:build']
 };

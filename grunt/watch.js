@@ -6,7 +6,7 @@ module.exports = {
 
     scripts: {
         files: ["<%= src.js %>/*.js"],
-        tasks: ["jshint:all", "uglify:dev", "notify:scripts"]
+        tasks: ["eslint", "uglify:dev", "notify:scripts"]
     },
 
     copy: {
