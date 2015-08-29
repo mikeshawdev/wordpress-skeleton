@@ -10,9 +10,9 @@ bower_components
 .env
 
 public/wp
-public/content/languages
-public/content/plugins
-public/content/uploads
+public/app/languages
+public/app/plugins
+public/app/uploads
 
 *.sql
 *.orig
