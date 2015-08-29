@@ -10,20 +10,20 @@
 /**
  * Bring in the Composer autoloader
  */
-require_once dirname(__FILE__) . '/../vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 
 /**
  * Set our environment variables
  */
-Dotenv::load(dirname(__FILE__) . '/..');
+(new Dotenv\Dotenv(__DIR__ . '/..'))->load();
+
 
 /**
  * Custom content directory
  */
-
-define('WP_CONTENT_DIR', dirname(__FILE__) . '/content');
-define('WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/content');
+define('WP_CONTENT_DIR', __DIR__ . '/app');
+define('WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/app');
 
 
 /**
@@ -55,33 +55,27 @@ define('DB_COLLATE', '');
  *
  * @url https://api.wordpress.org/secret-key/1.1/salt/
  */
-define('AUTH_KEY',         'unique_phrase_here');
-define('SECURE_AUTH_KEY',  'unique_phrase_here');
-define('LOGGED_IN_KEY',    'unique_phrase_here');
-define('NONCE_KEY',        'unique_phrase_here');
-define('AUTH_SALT',        'unique_phrase_here');
-define('SECURE_AUTH_SALT', 'unique_phrase_here');
-define('LOGGED_IN_SALT',   'unique_phrase_here');
-define('NONCE_SALT',       'unique_phrase_here');
+define('AUTH_KEY', env('AUTH_KEY'));
+define('SECURE_AUTH_KEY', env('SECURE_AUTH_KEY'));
+define('LOGGED_IN_KEY', env('LOGGED_IN_KEY'));
+define('NONCE_KEY', env('NONCE_KEY'));
+define('AUTH_SALT', env('AUTH_SALT'));
+define('SECURE_AUTH_SALT', env('SECURE_AUTH_SALT'));
+define('LOGGED_IN_SALT', env('LOGGED_IN_SALT'));
+define('NONCE_SALT', env('NONCE_SALT'));
 
 
 /**
  * WordPress database table prefix
  */
-$table_prefix  = 'wp_';
-
-
-/**
- * WordPress localized language, defaults to American English.
- */
-define('WPLANG', '');
+$table_prefix = 'wp_';
 
 
 /**
  * Define the path to the WordPress directory
  */
 if ( ! defined('ABSPATH')) {
-    define('ABSPATH', dirname(__FILE__) . '/wp/');
+    define('ABSPATH', __DIR__ . '/wp/');
 }
 
 require_once(ABSPATH . 'wp-settings.php');
