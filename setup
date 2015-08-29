@@ -1,21 +1,13 @@
 #!/usr/bin/env bash
 
-puppetModules=(
-    puppetlabs-apache
-    puppetlabs-mysql
-    example42-php
-)
-
-for module in "${puppetModules[@]}"
-do
-    puppet module install $module -i modules
-done
-
-
 vagrant up
 
 
 composer install
+
+composerPackages=(
+
+)
 
 
 nodePackages=(
