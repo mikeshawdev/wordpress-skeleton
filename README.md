@@ -1,7 +1,9 @@
 WordPress-Skeleton
 ==================
 
-My base WordPress installation. This is meant as a simple starting point for a WordPress project. Feel free to grab the repo and use it for your projects :)
+My base WordPress installation. This is meant as a simple starting point for a WordPress project. Feel free to grab the repo and use it for your projects.
+
+**This repository is no longer maintained**
 
 ## Requirements
 
